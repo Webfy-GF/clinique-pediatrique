@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Enfants</title>
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+  <h1>Enregistrer un enfant</h1>
+
+  <form id="childForm">
+
+    <div class="grid">
+
+    <div>
+
+    <h3>Informations de l'enfant</h3>
+
+    <label>Nom et prénom</label>
+    <input type="text" id="fullname" required>
+
+    <label>Date de naissance</label>
+    <input type="date" id="birthdate" required>
+
+    <label>Age</label>
+    <input type="text" id="age" readonly>
+
+    <label>Poids de naissance</label>
+    <input type="text" id="birthweight">
+
+    </div>
+
+    <div>
+
+    <h3>Parents</h3>
+
+    <label>Nom de la mère</label>
+    <input type="text" id="mother">
+
+    <label>Nom du père</label>
+    <input type="text" id="father">
+
+    <h3>Contact</h3>
+
+    <label>Adresse</label>
+    <input type="text" id="address">
+
+    <label>Courriel</label>
+    <input type="email" id="email">
+
+    <label>Téléphone 1</label>
+    <input type="text" id="phone1">
+
+    <label>Téléphone 2</label>
+    <input type="text" id="phone2">
+
+    <label>Référé(e) par</label>
+    <input type="text" id="referrer">
+
+    </div>
+
+    </div>
+
+    <button type="submit">Enregistrer</button>
+
+  </form>
+
+  <h2>Enfants enregistrés</h2>
+
+  <!-- <label>Rechercher un enfant :</label> -->
+  <input type="text" id="searchInput" placeholder="Rechercher un enfant">
+
+  <table>
+
+  <thead>
+  <tr>
+  <th>Nom complet</th>
+  <th>Date de naissance</th>
+  <th>Age</th>
+  <th>Actions</th>
+  </tr>
+  </thead>
+
+  <tbody id="childrenTable"></tbody>
+
+  </table>
+
+  <script src="../js/children.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Dossier Médical</title>
+
+<link rel="stylesheet" href="../css/styles.css">
+
+</head>
+
+<body>
+
+<button onclick="goBack()">⬅ Retour</button>
+
+<h2>Dossier Médical</h2>
+
+
+<!-- ================= 4 COLONNES ================= -->
+
+<div class="columns">
+
+
+<!-- COLONNE 1 -->
+
+<div class="section">
+
+<h3>Historique de la grossesse</h3>
+
+<label>Obstétricien</label>
+<input id="obstetrician">
+
+<label>Accouchement</label>
+
+<select id="delivery">
+
+<option value="">Choisir</option>
+<option>Voie basse</option>
+<option>Voie haute</option>
+
+</select>
+
+<div id="causeBox" style="display:none">
+
+<label>Cause (si voie haute)</label>
+<input id="cause">
+
+</div>
+
+<label>Durée grossesse</label>
+<input id="pregnancyDuration">
+
+<label>Forceps</label>
+<input id="forceps">
+
+<label>Post-partum</label>
+<input id="postpartum">
+
+<label>Poids gagné</label>
+<input id="pregnancyWeight">
+
+<label>Médicaments</label>
+<input id="pregnancyMedications">
+
+</div>
+
+
+<!-- COLONNE 2 -->
+
+<div class="section">
+
+<h3>Antécédents familiaux</h3>
+
+<label>TB</label>
+<input id="tb">
+
+<label>HTA</label>
+<input id="hta">
+
+<label>Cancer</label>
+<input id="cancer">
+
+<label>Syphilis</label>
+<input id="syphilis">
+
+<label>Allergie / Asthme</label>
+<input id="allergy">
+
+<label>Convulsions</label>
+<input id="convulsions">
+
+<label>Rhumatisme</label>
+<input id="rheumatism">
+
+<label>Diabète</label>
+<input id="diabetes">
+
+<label>Anémie</label>
+<input id="anemia">
+
+<label>Falciforme</label>
+<input id="sickleCell">
+
+</div>
+
+
+<!-- COLONNE 3 -->
+
+<div class="section">
+
+<h3>Développement</h3>
+
+<label>Allaitement</label>
+<select id="breastfeeding">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+<label>Diète actuelle</label>
+<select id="diet">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+<label>Lait maternisé</label>
+<select id="formula">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+<label>Tient la tête</label>
+<select id="head">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+<label>S'assied</label>
+<select id="sit">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+<label>Premiers mots</label>
+<select id="words">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+<label>Marche</label>
+<select id="walk">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+</div>
+
+
+<!-- COLONNE 4 -->
+
+<div class="section">
+
+<h3>Examen physique</h3>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+
+<div>
+
+<label>Rougeole</label>
+<select id="measles">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+<label>Oreillons</label>
+<select id="mumps">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+<label>Varicelle</label>
+<select id="chickenpox">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+<label>Rubéole</label>
+<select id="rubella">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+<label>Scarlatine</label>
+<select id="scarlet">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+</div>
+
+<div>
+
+<label>Otite</label>
+<select id="otitis">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+<label>Malaria</label>
+<select id="malaria">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+<label>Chirurgie</label>
+<select id="surgery">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+<label>Poids</label>
+<input id="weight">
+
+<label>Taille</label>
+<input id="height">
+
+<label>Température</label>
+<input id="temperature">
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ================= TABLEAU VACCINS ================= -->
+
+<div class="section">
+
+<h3>Vaccinations</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Vaccin</th>
+<th>1ère dose</th>
+<th>2e dose</th>
+<th>3e dose</th>
+<th>Rappel</th>
+<th>Date</th>
+<th>Âge</th>
+<th>Poids</th>
+<th>Taille</th>
+<th>PC</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr><td>BCG</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input type="date"></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+
+<tr><td>DTP</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input type="date"></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+
+<tr><td>Polio</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input type="date"></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+
+<tr><td>ROR</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input type="date"></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+
+<tr><td>Varicelle</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input type="date"></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+
+<tr><td>Méningocoque</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input type="date"></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+
+<tr><td>Pneumocoque</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input type="date"></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+
+<tr><td>Typhoïde</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input type="date"></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+
+<tr><td>Tétanos</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input type="date"></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+
+<tr><td>Hépatite A</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input type="date"></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+
+<tr><td>Rotavirus</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input type="date"></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+
+<tr><td>Influenza</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input type="date"></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+
+<tr><td>Tuberculine test</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input type="date"></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+
+<tr><td>Fièvre jaune</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input type="date"></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+
+<tr><td>Autres</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input type="date"></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<button class="save" onclick="saveReport()">Enregistrer</button>
+
+<script src="../js/reports.js"></script>
+
+</body>
+
+</html>
