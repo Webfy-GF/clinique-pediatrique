@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Clinique Élégance</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/contact.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR PRO ================= -->
+<nav class="navbar">
+
+  <div class="nav-container">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <span class="logo-icon">🏥</span>
+      <span class="logo-text">Clinique Pédiatrique</span>
+    </div>
+
+    <!-- MENU TOGGLE MOBILE -->
+    <div class="menu-toggle">&#9776;</div>
+
+    <!-- NAVIGATION -->
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="service.html">Services</a>
+            <a href="contact.html">Contact</a>
+
+            <!-- bouton mobile -->
+            <a href="login.html" class="mobile-login">Connexion</a>
+        </div>
+
+        <!-- bouton desktop -->
+        <a href="login.html" class="btn-login desktop-login">Connexion</a>
+
+  </div>
+
+</nav>
+
+    <div class="container">
+
+        <h1>Contactez la Clinique Élégance</h1>
+
+        <p>Nous sommes disponibles pour répondre à vos questions.</p>
+
+        <br>
+
+        <div class="info">
+
+            <p><strong>📍 Adresse :</strong> Bel-Air, Port-au-Prince, Haïti</p>
+
+            <p><strong>📞 Téléphone :</strong> +509 0000 0000</p>
+
+            <p><strong>📧 Email :</strong> contact@clinique-elegance.com</p>
+
+            <p><strong>🕒 Heures :</strong> Lundi – Vendredi : 8h00 – 17h00</p>
+
+        </div>
+
+        <h2>Envoyez-nous un message</h2>
+
+        <form>
+
+            <div class="form-group">
+            <input type="text" placeholder="Votre nom">
+            </div>
+
+            <div class="form-group">
+            <input type="email" placeholder="Votre email">
+            </div>
+
+            <div class="form-group">
+            <input type="text" placeholder="Sujet">
+            </div>
+
+            <div class="form-group">
+            <textarea rows="5" placeholder="Votre message"></textarea>
+            </div>
+
+            <button type="submit">Envoyer</button>
+
+        </form>
+
+    </div>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <h3>Clinique Pédiatrique Élégance</h3>
+      <p>
+        Centre médical privé spécialisé en pédiatrie,
+        suivi personnalisé et confidentiel.
+      </p>
+      <p class="footer-founded">Fondée en 2012</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Accès rapide</h4>
+      <ul>
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#services">Nos Services</a></li>
+        <li><a href="register.html">Prendre rendez-vous</a></li>
+        <li><a href="login.html">Espace Parent</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Téléphone : +509 XXXX XXXX</p>
+      <p>Email : contact@clinique-elegance.com</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Informations légales</h4>
+      <ul>
+        <li><a href="#">Politique confidentialité</a></li>
+        <li><a href="#">Protection données</a></li>
+        <li><a href="#">Mentions légales</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Clinique Pédiatrique Élégance. Tous droits réservés.</p>
+    <p class="secure">Site sécurisé • Données protégées</p>
+  </div>
+
+</footer>
+
+<!-- ================= MENU TOGGLE SCRIPT ================= -->
+<script>
+const toggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const navItems = document.querySelectorAll(".nav-links a");
+
+// Ouvrir / fermer
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// Fermer quand on clique sur un lien
+navItems.forEach(item => {
+  item.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+});
+
+// Fermer si on clique en dehors du menu
+document.addEventListener("click", (e) => {
+  if (!navLinks.contains(e.target) && !toggle.contains(e.target)) {
+    navLinks.classList.remove("active");
+  }
+});
+</script>
+
+</body>
+</html>

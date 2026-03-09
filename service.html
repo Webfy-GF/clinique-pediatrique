@@ -1,0 +1,186 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Services | Clinique Élégance</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/service.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR PRO ================= -->
+<nav class="navbar">
+
+  <div class="nav-container">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <span class="logo-icon">🏥</span>
+      <span class="logo-text">Clinique Pédiatrique</span>
+    </div>
+
+    <!-- MENU TOGGLE MOBILE -->
+    <div class="menu-toggle">&#9776;</div>
+
+    <!-- NAVIGATION -->
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="service.html">Services</a>
+            <a href="contact.html">Contact</a>
+
+            <!-- bouton mobile -->
+            <a href="login.html" class="mobile-login">Connexion</a>
+        </div>
+
+        <!-- bouton desktop -->
+        <a href="login.html" class="btn-login desktop-login">Connexion</a>
+
+  </div>
+
+</nav>
+
+<section class="hero">
+
+<h1>Nos Services Médicaux</h1>
+
+<p>La Clinique Élégance offre des soins modernes et adaptés aux enfants et aux familles.</p>
+
+</section>
+
+<section class="services">
+
+<div class="card">
+<h3>👶 Consultation pédiatrique</h3>
+<p>Suivi médical des enfants et consultations régulières.</p>
+</div>
+
+<div class="card">
+<h3>📅 Gestion des rendez-vous</h3>
+<p>Planification rapide et organisation des consultations.</p>
+</div>
+
+<div class="card">
+<h3>📑 Rapports médicaux</h3>
+<p>Création et gestion des dossiers médicaux des patients.</p>
+</div>
+
+<div class="card">
+<h3>🏥 Suivi médical</h3>
+<p>Historique des traitements et surveillance de la santé.</p>
+</div>
+
+</section>
+
+<section class="advantages">
+
+<h2>Pourquoi choisir notre clinique ?</h2>
+
+<ul>
+
+<li>👨‍⚕️ Personnel qualifié</li>
+
+<li>⏱ Service rapide</li>
+
+<li>📊 Gestion moderne des dossiers</li>
+
+<li>❤️ Soins adaptés aux enfants</li>
+
+</ul>
+
+</section>
+
+<section class="contact-cta">
+
+<h2>Besoin d'un rendez-vous ?</h2>
+
+<br>
+
+<a href="contact.html">Contactez-nous</a>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <h3>Clinique Pédiatrique Élégance</h3>
+      <p>
+        Centre médical privé spécialisé en pédiatrie,
+        suivi personnalisé et confidentiel.
+      </p>
+      <p class="footer-founded">Fondée en 2012</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Accès rapide</h4>
+      <ul>
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#services">Nos Services</a></li>
+        <li><a href="register.html">Prendre rendez-vous</a></li>
+        <li><a href="login.html">Espace Parent</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Téléphone : +509 XXXX XXXX</p>
+      <p>Email : contact@clinique-elegance.com</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Informations légales</h4>
+      <ul>
+        <li><a href="#">Politique confidentialité</a></li>
+        <li><a href="#">Protection données</a></li>
+        <li><a href="#">Mentions légales</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Clinique Pédiatrique Élégance. Tous droits réservés.</p>
+    <p class="secure">Site sécurisé • Données protégées</p>
+  </div>
+
+</footer>
+
+
+<!-- ================= MENU TOGGLE SCRIPT ================= -->
+<script>
+const toggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const navItems = document.querySelectorAll(".nav-links a");
+
+// Ouvrir / fermer
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// Fermer quand on clique sur un lien
+navItems.forEach(item => {
+  item.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+});
+
+// Fermer si on clique en dehors du menu
+document.addEventListener("click", (e) => {
+  if (!navLinks.contains(e.target) && !toggle.contains(e.target)) {
+    navLinks.classList.remove("active");
+  }
+});
+</script>
+
+</body>
+</html>
+```
