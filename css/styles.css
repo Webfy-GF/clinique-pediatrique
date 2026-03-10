@@ -1,14 +1,30 @@
-/* ===== STYLE GENERAL ===== */
+/* ================= BASE ================= */
+
+:root{
+--primary:#2c7be5;
+--success:#2e7d32;
+--light:#f4f6f8;
+--border:8px;
+--success: #4CAF50; 
+--warning: #ff9800; 
+--danger: #f44336;
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:Arial, sans-serif;
+}
 
 body{
-font-family: Arial, sans-serif;
-background:#f4f6f8;
-margin:40px;
+background:var(--light);
 color:#333;
+margin:40px;
 }
 
 h1,h2,h3{
-color:#2c7be5;
+color:var(--primary);
 }
 
 h2{
@@ -16,20 +32,24 @@ text-align:center;
 margin-bottom:20px;
 }
 
+h3{
+    text-align: center;
+}
 
-/* ===== FORMULAIRE ===== */
+
+/* ================= FORM ================= */
 
 form{
 background:white;
 padding:20px;
-border-radius:8px;
-margin-bottom:30px;
+border-radius:var(--border);
 box-shadow:0 2px 5px rgba(0,0,0,0.1);
+margin-bottom:30px;
 }
 
 label{
-font-weight:bold;
 display:block;
+font-weight:bold;
 margin-top:10px;
 }
 
@@ -42,18 +62,38 @@ border:1px solid #ccc;
 border-radius:4px;
 }
 
+.pending {
+    background-color: var(--warning); 
+    color: white; padding: 4px 8px; 
+    border-radius: 6px; font-size: 12px; 
+} 
 
-/* ===== BOUTONS ===== */
+.confirmed { 
+    background-color: var(--success); 
+    color: white; 
+    padding: 4px 8px; 
+    border-radius: 6px; 
+    font-size: 12px; }
+
+.cancelled { 
+    background-color: var(--danger); 
+    color: white; 
+    padding: 4px 8px; 
+    border-radius: 6px; 
+    font-size: 12px; 
+}
+
+
+/* ================= BUTTON ================= */
 
 button{
-background:#2c7be5;
+background:var(--primary);
 color:white;
 border:none;
 padding:8px 12px;
+border-radius:8px;
 cursor:pointer;
-border-radius:4px;
 margin-right:5px;
-font-size:14px;
 }
 
 button:hover{
@@ -61,107 +101,59 @@ background:#1a5ec8;
 }
 
 .save{
+background:var(--success);
 margin-top:20px;
 padding:10px 20px;
-background:#2e7d32;
-}
-
-.save:hover{
-background:#1f5d24;
 }
 
 
-/* ===== TABLEAUX ===== */
+/* ================= TABLE ================= */
 
-/* TABLEAU VACCINS */
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    background: white;
+table{
+width:80%;
+border-collapse:collapse;
+margin-top:10px;
+margin-left: 100px;
+background:white;
+box-shadow:0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* En-tête du tableau */
-
-thead {
-    background-color: #2c7be5;
-    color: white;
+thead{
+background:var(--primary);
+color:white;
 }
 
-thead th {
-    padding: 12px;
-    text-align: center;
-    font-size: 14px;
-    border: 1px solid #dcdcdc;
+th,td{
+padding:10px;
+border:1px solid #ddd;
+text-align:center;
 }
 
-/* Corps du tableau */
-
-tbody td {
-    border: 1px solid #e0e0e0;
-    padding: 8px;
-    text-align: center;
+tbody td:first-child{
+text-align:left;
+font-weight:600;
+background:#f7f9fc;
 }
 
-/* Nom du vaccin */
-
-tbody td:first-child {
-    text-align: left;
-    font-weight: 600;
-    background: #f7f9fc;
+tbody tr:hover{
+background:#f1f6ff;
 }
 
-/* Inputs dans les cellules */
-
-table input {
-    width: 90%;
-    padding: 5px;
-    border: 1px solid #cfd4da;
-    border-radius: 4px;
-    font-size: 13px;
-}
-
-/* Input date */
-
-table input[type="date"] {
-    padding: 4px;
-}
-
-/* Effet au survol */
-
-tbody tr:hover {
-    background-color: #f1f6ff;
-}
-
-/* Responsive pour petits écrans */
-
-@media (max-width: 900px) {
-    table {
-        font-size: 12px;
-    }
-
-    thead th {
-        padding: 8px;
-    }
-
-    table input {
-        width: 80%;
-    }
+table input{
+width:90%;
+padding:5px;
+border:1px solid #cfd4da;
+border-radius:4px;
 }
 
 
-/* ===== PAGE CHILDREN ===== */
+/* ================= LAYOUT ================= */
 
 .grid{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:25px;
 }
-
-
-/* ===== DOSSIER MEDICAL ===== */
 
 .columns{
 display:grid;
@@ -178,12 +170,11 @@ box-shadow:0 0 5px rgba(0,0,0,0.1);
 }
 
 .section h3{
-margin-top:0;
-color:#2c7be5;
+margin-bottom:10px;
 }
 
 
-/* ===== SECTION INFO VISITE ===== */
+/* ================= VISIT INFO ================= */
 
 .top-info{
 display:grid;
@@ -199,24 +190,8 @@ border-radius:6px;
 box-shadow:0 0 4px rgba(0,0,0,0.08);
 }
 
-.top-info label{
-font-size:13px;
-}
 
-
-/* ===== TABLEAU VACCINS ===== */
-
-table thead{
-background:#2c7be5;
-color:white;
-}
-
-table tbody tr:hover{
-background:#f1f6ff;
-}
-
-
-/* ===== RESPONSIVE ===== */
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:1200px){
 
@@ -244,199 +219,4 @@ grid-template-columns:1fr;
 grid-template-columns:repeat(2,1fr);
 }
 
-}
-
-/* ===============================
-   VARIABLES COULEURS
-================================= */
-:root {
-  --primary: #4da6ff;
-  --secondary: #e6f4ff;
-  --success: #4CAF50;
-  --warning: #ff9800;
-  --danger: #f44336;
-  --light: #f9fbfd;
-  --dark: #333;
-  --white: #ffffff;
-  --border-radius: 8px;
-}
-
-/* ===============================
-   RESET & BASE
-================================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
-
-body {
-  background-color: var(--light);
-  padding: 20px;
-  color: var(--dark);
-}
-
-h1 {
-  margin-bottom: 20px;
-  color: var(--primary);
-}
-
-/* ===============================
-   BUTTONS
-================================= */
-button {
-  padding: 8px 14px;
-  margin-bottom: 3px;
-  border: none;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  font-weight: 500;
-  transition: 0.3s;
-  background-color: var(--primary);
-  color: var(--white);
-}
-
-button:hover {
-  opacity: 0.85;
-}
-
-/* ===============================
-   FORMS
-================================= */
-form {
-  margin-bottom: 20px;
-  background: var(--white);
-  padding: 15px;
-  border-radius: var(--border-radius);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-form input,
-form select {
-  padding: 8px;
-  margin: 5px 5px 10px 0;
-  border: 1px solid #ccc;
-  border-radius: var(--border-radius);
-  width: 200px;
-}
-
-form label {
-  display: block;
-  margin-top: 10px;
-  font-weight: 500;
-}
-
-/* ===============================
-   TABLES
-================================= */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: var(--white);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-thead {
-  background-color: var(--primary);
-  color: var(--white);
-}
-
-th, td {
-  padding: 12px;
-  text-align: left;
-}
-
-tbody tr {
-  border-bottom: 1px solid #eee;
-}
-
-tbody tr:hover {
-  background-color: var(--secondary);
-}
-
-/* ===============================
-   STATUS BADGES
-================================= */
-.pending {
-  background-color: var(--warning);
-  color: white;
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 12px;
-}
-
-.confirmed {
-  background-color: var(--success);
-  color: white;
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 12px;
-}
-
-.cancelled {
-  background-color: var(--danger);
-  color: white;
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 12px;
-}
-
-/* ===============================
-   MODAL
-================================= */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal form {
-  background: var(--white);
-  padding: 20px;
-  border-radius: var(--border-radius);
-  width: 300px;
-}
-
-/* ===============================
-   RESPONSIVE
-================================= */
-@media (max-width: 768px) {
-
-  body {
-    padding: 10px;
-  }
-
-  table, thead, tbody, th, td, tr {
-    display: block;
-  }
-
-  thead {
-    display: none;
-  }
-
-  tr {
-    margin-bottom: 15px;
-    background: var(--white);
-    padding: 10px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  }
-
-  td {
-    padding: 8px 0;
-  }
-
-  form input,
-  form select {
-    width: 100%;
-  }
 }
