@@ -1,13 +1,23 @@
 /* ================= BASE ================= */
 
 :root{
---primary:#2c7be5;
---success:#2e7d32;
---light:#f4f6f8;
---border:8px;
---success: #4CAF50; 
---warning: #ff9800; 
---danger: #f44336;
+
+    --primary: #5784BA;
+    --secondary: #9AC8EB;
+    --accent: #F4CFDF;
+    --light: #ffffff;
+    --dark: #0f172a;
+    --bg: #f8fafc;
+    --text-color: #1e293b;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.08);
+    --border-radius: 12px;
+    --transition: 0.3s ease-in-out;
+    --light:#f4f6f8;
+    --border:8px;
+    --success: #5FC2BA;
+    --warning: #F4A261;
+    --danger: #f44336;
 }
 
 *{
@@ -20,7 +30,89 @@ font-family:Arial, sans-serif;
 body{
 background:var(--light);
 color:#333;
-margin:40px;
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+body{
+margin:0;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+position:fixed;
+top:0;
+left:0;
+width:250px;
+height:100vh;
+
+background-color:var(--primary);
+color:var(--light);
+
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+
+padding:20px 0;
+}
+
+/* LOGO */
+
+.sidebar-logo{
+font-size:20px;
+font-weight:700;
+text-align:center;
+margin-bottom:30px;
+}
+
+/* MENU */
+
+.sidebar-menu a{
+display:block;
+padding:12px 20px;
+color:var(--light);
+text-decoration:none;
+border-left:4px solid transparent;
+transition:0.3s;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active{
+background-color:var(--secondary);
+border-left:4px solid var(--accent);
+}
+
+/* LOGOUT */
+
+.logout{
+padding:15px;
+}
+
+.logout a{
+display:block;
+text-align:center;
+padding:10px;
+background:var(--secondary);
+border-radius:6px;
+color:white;
+text-decoration:none;
+}
+
+.logout a:hover{
+background:var(--accent);
+color:black;
+}
+
+/* MAIN CONTENT */
+
+.main-content{
+margin-left:250px;
+padding:30px;
+width:calc(100% - 250px);
 }
 
 h1,h2,h3{
@@ -35,6 +127,8 @@ margin-bottom:20px;
 h3{
     text-align: center;
 }
+
+
 
 
 /* ================= FORM ================= */
@@ -97,11 +191,13 @@ margin-right:5px;
 }
 
 button:hover{
-background:#1a5ec8;
+background:var(--accent);
+color: black;
+
 }
 
 .save{
-background:var(--success);
+background:var(--primary);
 margin-top:20px;
 padding:10px 20px;
 }
@@ -119,8 +215,8 @@ box-shadow:0 2px 6px rgba(0,0,0,0.05);
 }
 
 thead{
-background:var(--primary);
-color:white;
+background:var(--secondary);
+color:black;
 }
 
 th,td{

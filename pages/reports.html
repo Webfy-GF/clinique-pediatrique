@@ -2,12 +2,9 @@
 <html lang="fr">
 
 <head>
-
 <meta charset="UTF-8">
 <title>Dossier Médical</title>
-
 <link rel="stylesheet" href="../css/styles.css">
-
 </head>
 
 <body>
@@ -16,8 +13,6 @@
 
 <h2>Dossier Médical</h2>
 
-
-<!-- ================= 4 COLONNES ================= -->
 
 <div class="columns">
 
@@ -60,17 +55,17 @@
 <label>Poids gagné</label>
 <input id="pregnancyWeight">
 
-<label>Médicaments</label>
+<label>Médicaments Pris pendant la grossesse</label>
 <input id="pregnancyMedications">
 
 </div>
 
 
-<!-- COLONNE 2 -->
+<!-- COLONNE 2 --> 
 
 <div class="section">
 
-<h3>Antécédents familiaux</h3>
+<h3>Historique Familiale</h3>
 
 <label>TB</label>
 <input id="tb">
@@ -90,16 +85,16 @@
 <label>Convulsions</label>
 <input id="convulsions">
 
-<label>Rhumatisme</label>
+<label>Rhumatisme articulaires</label>
 <input id="rheumatism">
 
 <label>Diabète</label>
 <input id="diabetes">
 
-<label>Anémie</label>
+<label>Anémie falciforme</label>
 <input id="anemia">
 
-<label>Falciforme</label>
+<label>Autres</label>
 <input id="sickleCell">
 
 </div>
@@ -109,9 +104,9 @@
 
 <div class="section">
 
-<h3>Développement</h3>
+<h3>Alimentation/Croissance</h3>
 
-<label>Allaitement</label>
+<label>Sein</label>
 <select id="breastfeeding">
 <option>Oui</option>
 <option>Non</option>
@@ -128,6 +123,9 @@
 <option>Oui</option>
 <option>Non</option>
 </select>
+
+<label>Médicaments</label>
+<input type="text" id="drugs">
 
 <label>Tient la tête</label>
 <select id="head">
@@ -147,11 +145,32 @@
 <option>Non</option>
 </select>
 
+<label>Se retourne sur le dos</label>
+<select id="words">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+<label>Premieres dents</label>
+<select id="words">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+<label>Se retourne sur le ventre</label>
+<select id="words">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
 <label>Marche</label>
 <select id="walk">
 <option>Oui</option>
 <option>Non</option>
 </select>
+
+<label>Autres</label>
+<input type="text" id="others">
 
 </div>
 
@@ -160,7 +179,7 @@
 
 <div class="section">
 
-<h3>Examen physique</h3>
+<h3>Historique Médicale</h3>
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
 
@@ -195,6 +214,28 @@
 <option>Oui</option>
 <option>Non</option>
 </select>
+
+<label>Coqueluche</label>
+<select id="scarlet">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+<label>Amygdalite</label>
+<select id="scarlet">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+
+<label>Diphtérie</label>
+<select id="diphteria">
+<option>Oui</option>
+<option>Non</option>
+</select>
+
+<label>Type d'hémogoglobine</label>
+<input type="hemoglobin">
 
 </div>
 

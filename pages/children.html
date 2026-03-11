@@ -2,92 +2,122 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Enfants</title>
+<title>Patients - Clinique Pédiatrique</title>
 <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
 
-  <h1>Enregistrer un enfant</h1>
+<!-- SIDEBAR -->
+<aside class="sidebar">
 
-  <form id="childForm">
+<div class="sidebar-logo">
+🏥 Clinique Pédiatrique
+</div>
 
-    <div class="grid">
+<nav class="sidebar-menu">
 
-    <div>
+<a href="dashboard.html">📊 Dashboard</a>
 
-    <h3>Informations de l'enfant</h3>
+<a href="children.html" class="active">👶 Patients</a>
 
-    <label>Nom et prénom</label>
-    <input type="text" id="fullname" required>
+<a href="reports.html">📁 Cahiers Médicaux</a>
 
-    <label>Date de naissance</label>
-    <input type="date" id="birthdate" required>
+<a href="#">👨‍⚕️ Personnel</a>
 
-    <label>Age</label>
-    <input type="text" id="age" readonly>
+</nav>
 
-    <label>Poids de naissance</label>
-    <input type="text" id="birthweight">
+<div class="logout">
+<a href="#">🚪 Déconnexion</a>
+</div>
 
-    </div>
+</aside>
 
-    <div>
 
-    <h3>Parents</h3>
+<!-- MAIN CONTENT -->
+<main class="main-content">
 
-    <label>Nom de la mère</label>
-    <input type="text" id="mother">
+<h1>Enregistrer un enfant</h1>
 
-    <label>Nom du père</label>
-    <input type="text" id="father">
+<form id="childForm">
 
-    <h3>Contact</h3>
+<div class="grid">
 
-    <label>Adresse</label>
-    <input type="text" id="address">
+<div>
 
-    <label>Courriel</label>
-    <input type="email" id="email">
+<h3>Informations de l'enfant</h3>
 
-    <label>Téléphone 1</label>
-    <input type="text" id="phone1">
+<label>Nom et prénom</label>
+<input type="text" id="fullname" required>
 
-    <label>Téléphone 2</label>
-    <input type="text" id="phone2">
+<label>Date de naissance</label>
+<input type="date" id="birthdate" required>
 
-    <label>Référé(e) par</label>
-    <input type="text" id="referrer">
+<label>Age</label>
+<input type="text" id="age" readonly>
 
-    </div>
+<label>Poids de naissance</label>
+<input type="text" id="birthweight">
 
-    </div>
+</div>
 
-    <button type="submit">Enregistrer</button>
+<div>
 
-  </form>
+<h3>Parents</h3>
 
-  <h2>Enfants enregistrés</h2>
+<label>Nom de la mère</label>
+<input type="text" id="mother">
 
-  <!-- <label>Rechercher un enfant :</label> -->
-  <input type="text" id="searchInput" placeholder="Rechercher un enfant">
+<label>Nom du père</label>
+<input type="text" id="father">
 
-  <table>
+<h3>Contact</h3>
 
-  <thead>
-  <tr>
-  <th>Nom complet</th>
-  <th>Date de naissance</th>
-  <th>Age</th>
-  <th>Actions</th>
-  </tr>
-  </thead>
+<label>Adresse</label>
+<input type="text" id="address">
 
-  <tbody id="childrenTable"></tbody>
+<label>Courriel</label>
+<input type="email" id="email">
 
-  </table>
+<label>Téléphone 1</label>
+<input type="text" id="phone1">
 
-  <script src="../js/children.js"></script>
+<label>Téléphone 2</label>
+<input type="text" id="phone2">
+
+<label>Référé(e) par</label>
+<input type="text" id="referrer">
+
+</div>
+
+</div>
+
+<button type="submit" class="save">Enregistrer</button>
+
+</form>
+
+<h2>Enfants enregistrés</h2>
+
+<input type="text" id="searchInput" placeholder="Rechercher un enfant">
+
+<table>
+
+<thead>
+<tr>
+<th>Nom complet</th>
+<th>Date de naissance</th>
+<th>Age</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody id="childrenTable"></tbody>
+
+</table>
+
+</main>
+
+<script src="../js/children.js"></script>
 
 </body>
 </html>

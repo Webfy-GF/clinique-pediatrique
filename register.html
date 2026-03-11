@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Créer un compte | Clinique Élégance</title>
+<link rel="stylesheet" href="css/auth.css">
+
+</head>
+<body>
+
+<div class="register-wrapper">
+  <div class="register-card">
+    <h2>Créer un compte</h2>
+
+    <div class="error" id="errorMsg"></div>
+
+    <form id="registerForm">
+      <input type="text" id="name" placeholder="Nom complet" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="tel" id="phone" placeholder="Téléphone" required>
+      <input type="password" id="password" placeholder="Mot de passe" required>
+
+      <select id="role">
+        <option value="parent">Parent</option>
+      </select>
+
+      <button type="submit">Créer compte</button>
+    </form>
+
+    <p>Déjà inscrit ? <a href="login.html">Se connecter</a></p>
+  </div>
+</div>
+
+<script>
+document.getElementById("registerForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const password = document.getElementById("password").value;
+  const errorMsg = document.getElementById("errorMsg");
+
+  if(password.length < 6){
+    errorMsg.innerText = "Mot de passe minimum 6 caractères";
+    return;
+  }
+
+  alert("Compte créé avec succès (simulation)");
+  window.location.href = "login.html";
+});
+</script>
+
+</body>
+</html>
